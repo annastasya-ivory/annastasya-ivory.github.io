@@ -34,6 +34,9 @@
                                 <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About Me</a>
                             </li>
                             <li class="group">
+                                <a href="#experience" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Experience</a>
+                            </li>
+                            <li class="group">
                                 <a href="#l-t" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Personal
                                     Skills</a>
                             </li>
@@ -159,76 +162,282 @@
     </section>
     <!-- About Section End -->
 
+    <!-- Experience Section Start -->
+
+    <section id="experience" class="pt-36 pb-32 bg-slate-100">
+        <style>
+            #experience {
+                --ex-accent: #ec4899;
+            }
+            
+            .ex-timeline {
+                position: relative;
+                max-width: 820px;
+                margin: 0 auto;
+                padding-left: 36px;
+            }
+            
+            .ex-timeline::before {
+                content: "";
+                position: absolute;
+                left: 7px;
+                top: 8px;
+                bottom: 8px;
+                width: 2px;
+                background: linear-gradient(to bottom, var(--ex-accent), rgba(236, 72, 153, 0.1));
+            }
+            
+            .ex-item {
+                position: relative;
+                margin-bottom: 28px;
+            }
+            
+            .ex-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .ex-item::before {
+                content: "";
+                position: absolute;
+                left: -36px;
+                top: 30px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: #f1f5f9;
+                border: 3px solid var(--ex-accent);
+                box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15);
+            }
+            
+            .ex-card {
+                background: #fff;
+                border: 1px solid #e2e8f0;
+                border-radius: 16px;
+                padding: 26px 28px;
+                box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+                transition: border-color .3s ease, box-shadow .3s ease;
+            }
+            
+            .ex-card:hover {
+                border-color: var(--ex-accent);
+                box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+            }
+            
+            .ex-date {
+                display: inline-block;
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: .02em;
+                color: var(--ex-accent);
+                background: rgba(236, 72, 153, 0.12);
+                padding: 4px 12px;
+                border-radius: 999px;
+                margin-bottom: 12px;
+            }
+            
+            .ex-role {
+                color: #0f172a;
+                font-weight: 700;
+                font-size: 1.25rem;
+                line-height: 1.3;
+            }
+            
+            .ex-company {
+                color: #64748b;
+                font-weight: 500;
+                font-size: 0.95rem;
+                margin-top: 4px;
+            }
+            
+            .ex-list {
+                margin-top: 16px;
+                padding: 0;
+                list-style: none;
+            }
+            
+            .ex-list li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 10px;
+                color: #475569;
+                font-size: 0.95rem;
+                line-height: 1.65;
+            }
+            
+            .ex-list li:last-child {
+                margin-bottom: 0;
+            }
+            
+            .ex-list li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.7em;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--ex-accent);
+            }
+            
+            @media (max-width: 520px) {
+                .ex-card {
+                    padding: 20px;
+                }
+                .ex-timeline {
+                    padding-left: 30px;
+                }
+                .ex-item::before {
+                    left: -30px;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Experience</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Work Experience</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">Three years of turning business needs into clear specifications, from analysis and design to UAT and deployment.</p>
+                </div>
+            </div>
+
+            <div class="w-full px-4">
+                <div class="ex-timeline">
+
+                    <!-- Product Analyst -->
+                    <div class="ex-item">
+                        <div class="ex-card">
+                            <span class="ex-date">May 2026 – Sep 2026</span>
+                            <h3 class="ex-role">Product Analyst</h3>
+                            <p class="ex-company">PT Javan Cipta Solusi · Yogyakarta, Indonesia</p>
+                            <ul class="ex-list">
+                                <li>Wrote SRS documents with test scenarios and acceptance criteria as the basis for UAT and QA.</li>
+                                <li>Monitored the backlog, sprint tasks, and defects in Jira together with developers, QA, and stakeholders.</li>
+                                <li>Presented progress to clients and proposed alternative solutions based on technical and timeline constraints.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- System Analyst -->
+                    <div class="ex-item">
+                        <div class="ex-card">
+                            <span class="ex-date">Jul 2023 – Apr 2026</span>
+                            <h3 class="ex-role">System Analyst</h3>
+                            <p class="ex-company">PT Javan Cipta Solusi · Yogyakarta, Indonesia</p>
+                            <ul class="ex-list">
+                                <li>Gathered requirements from clients, analyzed existing processes to find gaps and pain points, and translated them into SRS and SDD documents, including change request analysis.</li>
+                                <li>Designed process and system models (BPMN, activity, sequence, and use case diagrams, ERDs, wireframes, database schemas) and defined role-based access control with Keycloak and external API integrations.</li>
+                                <li>Took part in architecture and solution design reviews and supported deployment across multiple projects.</li>
+                                <li>Investigated a personal data exposure issue in a government training system through network traffic analysis, traced the root cause, agreed on a fix with developers, and re-tested to confirm the data was no longer exposed.</li>
+                                <li>Tested APIs with Postman and Apidog, facilitated UAT, and covered regression testing when QA capacity was limited.</li>
+                                <li>Mentored junior analyst interns and used AI assistants to speed up documentation and analysis.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- MyDevTeam -->
+                    <div class="ex-item">
+                        <div class="ex-card">
+                            <span class="ex-date">Sep 2022 – Mar 2023</span>
+                            <h3 class="ex-role">Web Developer Intern</h3>
+                            <p class="ex-company">MyDevTeam (PT Adi Karya Media) · Surabaya, Indonesia</p>
+                            <ul class="ex-list">
+                                <li>Built responsive web pages with PHP, SASS, and a CMS (Contentful, Bulma). Cut page load time by 35% through minification, which lifted user engagement by 8%.</li>
+                                <li>Integrated backend APIs and tested them with Postman, working closely with designers and backend developers.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PT PAL -->
+                    <div class="ex-item">
+                        <div class="ex-card">
+                            <span class="ex-date">Jan 2022 – Feb 2022</span>
+                            <h3 class="ex-role">Web Developer Intern</h3>
+                            <p class="ex-company">PT PAL Indonesia (Persero) · Surabaya, Indonesia</p>
+                            <ul class="ex-list">
+                                <li>Built an internal asset management web app for the IT division with Laravel, MySQL, and JavaScript, starting from use case diagrams, ERDs, and mockups.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section End -->
+
     <!-- Languages & Tools Section Start -->
 
-    <section id="l-t" class="pt-36 pb-32 bg-slate-800">
+    <section id="l-t" class="pt-36 pb-32 bg-white">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Personal Skills</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Skills & Tools</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Skills & Tools</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">From requirement analysis and system modeling to testing and security, backed by a hands-on web development foundation.</p>
                 </div>
             </div>
 
             <!-- Analysis & Documentation -->
             <div class="w-full px-4 mb-12">
-                <h3 class="font-semibold text-white text-xl text-center mb-6">Analysis & Documentation</h3>
+                <h3 class="font-semibold text-dark text-xl text-center mb-6">Analysis & Documentation</h3>
                 <div class="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Requirement
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Requirement
                         Gathering & Analysis</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Business
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Business
                         Process Analysis</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">SRS
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">SRS
                         & SDD Documentation</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Acceptance
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Acceptance
                         Criteria & UAT</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Change
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Change
                         Request Analysis</span>
                 </div>
             </div>
 
             <!-- Modeling & Design -->
             <div class="w-full px-4 mb-12">
-                <h3 class="font-semibold text-white text-xl text-center mb-6">Modeling & Design</h3>
+                <h3 class="font-semibold text-dark text-xl text-center mb-6">Modeling & Design</h3>
                 <div class="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">BPMN</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Activity
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">BPMN</span>
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Activity
                         Diagram</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Sequence
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Sequence
                         Diagram</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Use
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Use
                         Case Diagram</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">ERD
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">ERD
                         & Database Design</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">SQL</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Wireframing
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">SQL</span>
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Wireframing
                         (Figma, Balsamiq)</span>
                 </div>
             </div>
 
             <!-- Testing, Security & Tools -->
             <div class="w-full px-4 mb-12">
-                <h3 class="font-semibold text-white text-xl text-center mb-6">Testing, Security & Tools</h3>
+                <h3 class="font-semibold text-dark text-xl text-center mb-6">Testing, Security & Tools</h3>
                 <div class="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">API
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">API
                         Testing (Postman, Apidog)</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Security
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Security
                         Requirements (RBAC, Keycloak)</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Security
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Security
                         Issue Investigation & RCA</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Network
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Network
                         Traffic Analysis (Wireshark)</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">Task
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">Task
                         Management (Jira, Taiga, Active Collab)</span>
-                    <span class="rounded-full border border-slate-600 bg-slate-700 px-4 py-2 text-sm font-medium text-slate-200">AI-Assisted
+                    <span class="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium text-dark">AI-Assisted
                         Analysis (Claude, ChatGPT)</span>
                 </div>
             </div>
 
             <!-- Web Development (ikon lama) -->
             <div class="w-full px-4">
-                <h3 class="font-semibold text-white text-xl text-center mb-6">Web Development</h3>
+                <h3 class="font-semibold text-dark text-xl text-center mb-6">Web Development</h3>
                 <div class="flex flex-wrap items-center justify-center">
                     <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
                         <img src="dist/img/lt/bulma-color.svg" width="80" alt="Bulma">
